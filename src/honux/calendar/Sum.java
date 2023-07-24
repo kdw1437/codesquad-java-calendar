@@ -4,16 +4,14 @@ import java.util.Scanner;
 
 public class Sum {
 	public static void main(String[] args) {
-		int a, b;
 		Scanner scanner = new Scanner(System.in);
-		String s1, s2;
-		System.out.println("두 수를 입력해 주세요.");
-		s1 = scanner.next();
-		s2 = scanner.next();
-		a = Integer.parseInt(s1);
-		b = Integer.parseInt(s2);
+		System.out.println("달을 입력하세요.");
+		int month = scanner.nextInt(); //scanner인스턴스에 non static 메소드인 nextInt를 적용해서 scnnaer의 int type의 필드값을 얻어냄.
 		
-		System.out.printf("%d와 %d의 합은 %d입니다.", a, b, a+b);
+		int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		
+		System.out.printf("%d 월은 %d 일까지 있습니다.\n", month, maxDays[month-1]);
 		scanner.close();
+		}
 	}
-}
+
